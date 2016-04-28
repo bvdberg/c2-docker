@@ -4,7 +4,7 @@ set -e
 # Build clang
 mkdir -p /root/llvm-build
 cd /root/llvm-build
-../llvm/configure --enable-optimizedd --prefix=/root/llvm-c2 --with-python=/usr/bin/python2.7
+../llvm/configure --enable-optimized --prefix=/root/llvm-c2 --with-python=/usr/bin/python2.7
 make -j8
 make install
 
