@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER ckaygusu@gmail.com
 
@@ -10,7 +10,7 @@ RUN apt-get update && \
 		python2.7-minimal \
 		cmake \
 		groff \
-		libtinfo-dev		
+		libtinfo-dev
 
 ADD llvm /root/llvm
 ADD compiler-rt root/llvm/projects/compiler-rt

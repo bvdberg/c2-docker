@@ -4,7 +4,7 @@ set -e
 # Build clang
 mkdir -p /root/llvm-build
 cd /root/llvm-build
-../llvm/configure --enable-optimizedd --prefix=/root/llvm-c2 --with-python=/usr/bin/python2.7
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="Release" -DLLVM_ENABLE_ASSERTIONS=ON -DCMAKE_INSTALL_PREFIX=/root/llvm-c2 -DLLVM_ENABLE_PEDANTIC=OFF ../llvm
 make -j8
 make install
 
