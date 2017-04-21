@@ -4,5 +4,5 @@ create_container:
 	docker build -t c2_compiler_image .
 
 build_c2c:
-	docker run -v $(CURDIR)/build:/root/c2-build c2_compiler_image
+	docker run --rm -v $(CURDIR)/build:/root/c2-build c2_compiler_image
 
